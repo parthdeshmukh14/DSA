@@ -39,3 +39,41 @@
 
 <p>&nbsp;</p>
 <strong>Follow-up:&nbsp;</strong>Can you come up with an algorithm that is less than <code>O(n<sup>2</sup>)</code><font face="monospace">&nbsp;</font>time complexity?
+
+
+---
+
+# My Approach
+
+## Brute Force
+
+- Check every possible pair of elements in the array.
+- For each element, compare it with all the remaining elements.
+- If the sum of any pair equals the target, return their indices.
+- Since every pair is checked, this approach is inefficient for large inputs.
+
+## Optimized Approach
+
+- Use a `HashMap` to store each number along with its index.
+- Traverse the array once.
+- For each element:
+  - Calculate the required complement as `target - currentElement`.
+  - Check if the complement already exists in the `HashMap`.
+    - If it exists, return the indices of the complement and the current element.
+    - Otherwise, store the current element and its index in the `HashMap`.
+- This allows us to find the required pair in a single traversal.
+
+## Complexity
+
+### Brute Force
+- **Time Complexity:** `O(n²)`
+- **Space Complexity:** `O(1)`
+
+### Optimized
+- **Time Complexity:** `O(n)`
+- **Space Complexity:** `O(n)`
+
+## Key Learning
+
+- Whenever a problem involves finding a value quickly while traversing an array, consider using a `HashMap`.
+- A `HashMap` provides average `O(1)` lookup time, reducing the overall complexity from **O(n²)** to **O(n)**.
