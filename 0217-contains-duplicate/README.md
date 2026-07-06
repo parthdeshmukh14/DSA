@@ -40,3 +40,21 @@
 	<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
 	<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
+---
+
+## My Approach
+
+### Brute Force
+- Compared every element with every other element.
+- Time Complexity: O(n²)
+- Space Complexity: O(1)
+- This resulted in TLE.
+
+### Optimized Approach
+- Used a HashSet to store visited elements.
+- If the element already exists, return `true`.
+- Otherwise, insert it into the HashSet.
+
+### Complexity
+- **Time:** O(n)
+- **Space:** O(n)
