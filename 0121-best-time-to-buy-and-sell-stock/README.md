@@ -29,3 +29,40 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 	<li><code>1 &lt;= prices.length &lt;= 10<sup>5</sup></code></li>
 	<li><code>0 &lt;= prices[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
+
+---
+
+# My Approach
+
+## Brute Force
+
+- Consider every possible day as the buying day.
+- For each buying day, iterate through all the remaining days as possible selling days.
+- Calculate the profit for every valid buy-sell pair.
+- Keep track of the maximum profit obtained.
+- Since every pair is checked, this approach results in **Time Limit Exceeded (TLE)** for large inputs.
+
+## Optimized Approach
+
+- Traverse the array only once.
+- Maintain a variable `buy` to store the minimum stock price encountered so far.
+- For every price:
+  - If the current price is less than `buy`, update `buy`.
+  - Otherwise, calculate the profit as `currentPrice - buy`.
+  - Update the maximum profit if the current profit is greater.
+- This ensures we always buy at the lowest price before selling.
+
+## Complexity
+
+### Brute Force
+- **Time Complexity:** `O(n²)`
+- **Space Complexity:** `O(1)`
+
+### Optimized
+- **Time Complexity:** `O(n)`
+- **Space Complexity:** `O(1)`
+
+## Key Learning
+
+- Instead of checking every possible buy-sell pair, keep track of the minimum buying price seen so far while traversing the array.
+- This reduces the time complexity from **O(n²)** to **O(n)**.
