@@ -23,3 +23,38 @@
 
 <p>&nbsp;</p>
 <p><strong>Follow up:</strong>&nbsp;Can you solve the problem in <code>O(1)</code>&nbsp;extra&nbsp;space complexity? (The output array <strong>does not</strong> count as extra space for space complexity analysis.)</p>
+## 💡 My Approach
+
+### Brute Force
+
+- Traverse the array using an outer loop.
+- For every index `i`, calculate the product of all elements except `nums[i]`.
+- Use an inner loop to traverse the entire array.
+- Skip the current index (`i == j`) and multiply all other elements.
+- Store the final product in the result array.
+
+**Time Complexity:** `O(n²)`
+- The outer loop runs `n` times.
+- For each index, the inner loop traverses the entire array.
+
+**Space Complexity:** `O(1)` *(excluding the output array)*
+
+---
+
+### Optimized (Prefix & Suffix Product)
+
+- Observe that the answer for every index is:
+  - **Product of all elements to the left × Product of all elements to the right**
+- In the first pass, store the **prefix product** directly in the result array.
+  - `res[i]` contains the product of all elements before index `i`.
+- In the second pass, traverse from right to left while maintaining a `suffixProduct` variable.
+- Multiply `res[i]` (prefix product) with `suffixProduct` to get the final answer for each index.
+- Update `suffixProduct` after processing each element.
+- This avoids creating separate prefix and suffix arrays, making the solution space-efficient.
+
+**Time Complexity:** `O(n)`
+- One pass to compute prefix products.
+- One pass to incorporate suffix products.
+
+**Space Complexity:** `O(1)` *(excluding the output array)*
+- Uses only one extra variable (`suffixProduct`).
