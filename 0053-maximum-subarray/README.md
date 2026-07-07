@@ -35,3 +35,32 @@
 
 <p>&nbsp;</p>
 <p><strong>Follow up:</strong> If you have figured out the <code>O(n)</code> solution, try coding another solution using the <strong>divide and conquer</strong> approach, which is more subtle.</p>
+## 💡 My Approach
+
+### Brute Force
+
+- Consider every possible subarray using two nested loops.
+- For each starting index, keep adding elements to calculate the sum of every possible ending index.
+- Update the maximum subarray sum whenever a larger sum is found.
+
+**Time Complexity:** `O(n²)`
+- The outer loop selects the starting index.
+- The inner loop extends the subarray while maintaining its sum.
+
+**Space Complexity:** `O(1)`
+
+---
+
+### Optimized (Kadane's Algorithm)
+
+- Traverse the array while maintaining a **running sum**.
+- Add the current element to the running sum.
+- Update the maximum subarray sum with the current running sum.
+- If the running sum becomes negative, reset it to `0` because a negative sum will only decrease the sum of any future subarray.
+- Continue until the end of the array.
+
+**Time Complexity:** `O(n)`
+- The array is traversed only once.
+
+**Space Complexity:** `O(1)`
+- Only two variables (`sum` and `maxSum`) are used.
