@@ -20,3 +20,21 @@
 
 <p>&nbsp;</p>
 <strong>Follow up:</strong> Could you minimize the total number of operations done?
+
+
+## 💡 My Approach (Brute Force)
+
+- Traverse the array using two nested loops.
+- For every index `i`, check if `nums[i]` is `0`.
+- If it is `0`, search for the next non-zero element (`j > i`).
+- Once a non-zero element is found, swap it with the zero.
+- Continue this process until all zeros are shifted towards the end of the array while maintaining the relative order of non-zero elements.
+
+### Time Complexity
+- **O(n²)**
+  - The outer loop runs `n` times.
+  - For each zero, the inner loop may scan the remaining part of the array.
+
+### Space Complexity
+- **O(1)**
+  - No extra data structure is used; all operations are performed in-place.
