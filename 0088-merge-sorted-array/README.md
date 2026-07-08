@@ -46,3 +46,31 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 
 <p>&nbsp;</p>
 <p><strong>Follow up: </strong>Can you come up with an algorithm that runs in <code>O(m + n)</code> time?</p>
+## 💡 My Approach
+
+### Brute Force
+
+- Copy all elements of `nums2` into the empty positions of `nums1`.
+- Sort the complete `nums1` array.
+- Since both arrays are now combined, sorting produces the required merged array.
+
+**Time Complexity:** `O((m+n) log(m+n))`
+
+**Space Complexity:** `O(1)`
+
+---
+
+### Optimized (Three Pointers)
+
+- Since both arrays are already sorted, there is no need to sort again.
+- Use three pointers:
+  - `i` → Last valid element in `nums1`
+  - `j` → Last element in `nums2`
+  - `k` → Last position of `nums1`
+- Compare the largest elements from both arrays and place the larger one at `nums1[k]`.
+- Move the corresponding pointer backward and continue until all elements are merged.
+- If any elements remain in `nums2`, copy them into `nums1`.
+
+**Time Complexity:** `O(m+n)`
+
+**Space Complexity:** `O(1)`
