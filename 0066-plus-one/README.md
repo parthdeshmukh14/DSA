@@ -41,3 +41,13 @@ Thus, the result should be [1,0].
 	<li><code>0 &lt;= digits[i] &lt;= 9</code></li>
 	<li><code>digits</code> does not contain any leading <code>0</code>&#39;s.</li>
 </ul>
+## 💡 My Approach (Optimal)
+
+- Traverse the array from right to left because addition starts from the least significant digit.
+- If the current digit is less than `9`, simply increment it by `1` and return the array immediately, as no further carry is generated.
+- If the current digit is `9`, change it to `0` and continue moving left since the carry must be propagated to the previous digit.
+- If the loop finishes without returning, it means every digit was `9`. In this case, create a new array of size `n + 1`, set the first element to `1`, and leave the remaining elements as `0` to represent the carried-over value.
+
+**Time Complexity:** `O(n)`
+
+**Space Complexity:** `O(1)` (In the worst case, a new array of size `n + 1` is created only when all digits are `9`, but this is the required output array and is not counted as extra auxiliary space.)
