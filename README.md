@@ -47,6 +47,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0088-merge-sorted-array](https://github.com/parthdeshmukh14/DSA/tree/master/0088-merge-sorted-array) |
 | [0189-rotate-array](https://github.com/parthdeshmukh14/DSA/tree/master/0189-rotate-array) |
 | [0283-move-zeroes](https://github.com/parthdeshmukh14/DSA/tree/master/0283-move-zeroes) |
+| [0344-reverse-string](https://github.com/parthdeshmukh14/DSA/tree/master/0344-reverse-string) |
 ## Math
 |  |
 | ------- |
@@ -57,6 +58,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0014-longest-common-prefix](https://github.com/parthdeshmukh14/DSA/tree/master/0014-longest-common-prefix) |
 | [0242-valid-anagram](https://github.com/parthdeshmukh14/DSA/tree/master/0242-valid-anagram) |
+| [0344-reverse-string](https://github.com/parthdeshmukh14/DSA/tree/master/0344-reverse-string) |
 ## Trie
 |  |
 | ------- |
