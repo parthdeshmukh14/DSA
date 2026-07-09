@@ -26,3 +26,18 @@
 	<li><code>0 &lt;= strs[i].length &lt;= 200</code></li>
 	<li><code>strs[i]</code> consists of only lowercase English letters if it is non-empty.</li>
 </ul>
+
+
+
+## 💡 Complexity Analysis
+
+**Time Complexity:** `O(N × M)`
+
+- `N` = Number of strings.
+- `M` = Length of the shortest/common prefix limit.
+- For each character position, every string is checked until a mismatch is found.
+
+**Space Complexity:** `O(1)`
+
+- Uses only a few variables (`i`, `j`, `ch`, `first`) and no extra data structures.
+- The returned substring is the required output and is not counted as auxiliary space.
