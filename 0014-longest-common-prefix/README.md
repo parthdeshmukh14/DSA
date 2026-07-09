@@ -29,7 +29,14 @@
 
 
 
-## 💡 Complexity Analysis
+
+## 💡 My Approach (Vertical Scanning)
+
+- Use the first string as the reference since the longest common prefix cannot be longer than it.
+- Traverse the first string character by character.
+- For each character position, compare the corresponding character with every other string.
+- If any string ends (`i >= strs[j].length()`) or a character mismatch is found, return the prefix from index `0` to `i`.
+- If all characters of the first string are successfully compared, the first string itself is the longest common prefix.
 
 **Time Complexity:** `O(N × M)`
 
@@ -39,5 +46,5 @@
 
 **Space Complexity:** `O(1)`
 
-- Uses only a few variables (`i`, `j`, `ch`, `first`) and no extra data structures.
+- Uses only a few extra variables and no additional data structures.
 - The returned substring is the required output and is not counted as auxiliary space.
