@@ -50,3 +50,24 @@
 	<li><code>t.length == s.length</code></li>
 	<li><code>s</code> and <code>t</code> consist of any valid ascii character.</li>
 </ul>
+Verified Approach (Optimal)
+
+- First, check if both strings have the same length. If not, return `false`.
+- Use **two HashMaps**:
+  - One to store the mapping from `s → t`.
+  - Another to store the reverse mapping from `t → s`.
+- Traverse both strings simultaneously.
+- If a character has already been mapped, verify that the existing mapping matches the current character.
+- If the mapping is inconsistent in either HashMap, return `false`.
+- Otherwise, create the mapping in both directions.
+- If the traversal completes without conflicts, the strings are isomorphic.
+
+**Why Two HashMaps?**
+
+- The first HashMap ensures **one key maps to one value**.
+- The second HashMap ensures **one value maps back to one key**.
+- Together, they enforce a **one-to-one (bijective)** mapping between the characters of both strings.
+
+**Time Complexity:** `O(n)`
+
+**Space Complexity:** `O(n)`
