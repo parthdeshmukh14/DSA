@@ -35,3 +35,18 @@
 	<li><code>s</code> consists of only English letters and spaces <code>&#39; &#39;</code>.</li>
 	<li>There will be at least one word in <code>s</code>.</li>
 </ul>
+
+ My Approach (Optimal)
+
+- Traverse the string from the end towards the beginning.
+- Ignore all trailing spaces until the first non-space character is found.
+- Once the last word starts, count each character.
+- Stop counting when a space is encountered again, as it marks the beginning of the last word.
+- Return the count as the length of the last word.
+
+**Time Complexity:** `O(n)`
+- In the worst case, the entire string is traversed once.
+
+**Space Complexity:** `O(1)`
+- Only a single counter variable is used.
+
