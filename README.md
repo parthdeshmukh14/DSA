@@ -25,6 +25,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/parthdeshmukh14/DSA/tree/master/0001-two-sum) |
+| [0205-isomorphic-strings](https://github.com/parthdeshmukh14/DSA/tree/master/0205-isomorphic-strings) |
 | [0217-contains-duplicate](https://github.com/parthdeshmukh14/DSA/tree/master/0217-contains-duplicate) |
 | [0242-valid-anagram](https://github.com/parthdeshmukh14/DSA/tree/master/0242-valid-anagram) |
 ## Sorting
@@ -59,6 +60,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0014-longest-common-prefix](https://github.com/parthdeshmukh14/DSA/tree/master/0014-longest-common-prefix) |
 | [0125-valid-palindrome](https://github.com/parthdeshmukh14/DSA/tree/master/0125-valid-palindrome) |
+| [0205-isomorphic-strings](https://github.com/parthdeshmukh14/DSA/tree/master/0205-isomorphic-strings) |
 | [0242-valid-anagram](https://github.com/parthdeshmukh14/DSA/tree/master/0242-valid-anagram) |
 | [0344-reverse-string](https://github.com/parthdeshmukh14/DSA/tree/master/0344-reverse-string) |
 ## Trie
