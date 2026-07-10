@@ -35,3 +35,27 @@ Since an empty string reads the same forward and backward, it is a palindrome.
 	<li><code>1 &lt;= s.length &lt;= 2 * 10<sup>5</sup></code></li>
 	<li><code>s</code> consists only of printable ASCII characters.</li>
 </ul>
+
+
+
+
+
+
+
+
+
+
+## 💡 My Approach (Better)
+
+- Convert the input string to lowercase so that character comparison becomes case-insensitive.
+- Traverse the string and keep only the alphanumeric characters (`a-z`, `A-Z`, `0-9`) by appending them to a `StringBuilder`.
+- Convert the `StringBuilder` into a new string containing only valid characters.
+- Use the **Two Pointer** technique to compare characters from both ends of the cleaned string.
+- If any pair of characters is different, return `false`.
+- If all corresponding characters match, return `true`.
+
+**Time Complexity:** `O(n)`
+- One traversal to build the cleaned string and another traversal to check for palindrome.
+
+**Space Complexity:** `O(n)`
+- An extra string (built using `StringBuilder`) is created to store only the alphanumeric characters.
