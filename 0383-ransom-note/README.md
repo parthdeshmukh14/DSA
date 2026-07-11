@@ -20,3 +20,19 @@
 	<li><code>1 &lt;= ransomNote.length, magazine.length &lt;= 10<sup>5</sup></code></li>
 	<li><code>ransomNote</code> and <code>magazine</code> consist of lowercase English letters.</li>
 </ul>
+## Approach
+
+- Create a `HashMap<Character, Integer>` to store the frequency of each character in `magazine`.
+- Traverse the `magazine` string and count the occurrences of every character.
+- Traverse the `ransomNote` string:
+  - If the character is not present in the map or its frequency is `0`, return `false`.
+  - Otherwise, decrement its frequency by `1` since that character has been used.
+- If all characters are successfully matched, return `true`.
+
+### Time Complexity
+- **O(m + n)**
+  - `m` = length of `magazine`
+  - `n` = length of `ransomNote`
+
+### Space Complexity
+- **O(1)** (At most 26 lowercase English letters are stored in the HashMap.)
