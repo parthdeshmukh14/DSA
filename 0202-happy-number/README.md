@@ -36,3 +36,18 @@
 <ul>
 	<li><code>1 &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>
 </ul>
+## Approach
+
+- Create a helper function to calculate the **sum of the squares of the digits** of a number.
+- Use a `HashSet` to keep track of all the numbers encountered during the process.
+- Repeatedly:
+  - If the current number becomes `1`, return `true`.
+  - If the current number is already present in the `HashSet`, a cycle has been detected, so return `false`.
+  - Otherwise, add the current number to the `HashSet` and replace it with the sum of the squares of its digits.
+- Continue until one of the above conditions is met.
+
+### Time Complexity
+- **O(log n)**
+
+### Space Complexity
+- **O(log n)** (for storing previously seen numbers in the `HashSet`)
