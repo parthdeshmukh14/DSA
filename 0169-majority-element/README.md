@@ -22,3 +22,30 @@
 
 <p>&nbsp;</p>
 <strong>Follow-up:</strong> Could you solve the problem in linear time and in <code>O(1)</code> space?
+
+## Approach 1: Brute Force
+
+- Traverse each element of the array.
+- For every element, iterate through the entire array and count its occurrences.
+- If the count of an element is greater than `n / 2`, return that element as the majority element.
+
+### Time Complexity
+- **O(n²)**
+
+### Space Complexity
+- **O(1)**
+
+---
+
+## Approach 2: HashMap (Better)
+
+- Create a `HashMap<Integer, Integer>` to store the frequency of each element.
+- Traverse the array and count the occurrences of every element using the `HashMap`.
+- Traverse the array again and check if the frequency of any element is greater than `n / 2`.
+- Return that element as the majority element.
+
+### Time Complexity
+- **O(n)**
+
+### Space Complexity
+- **O(n)**
