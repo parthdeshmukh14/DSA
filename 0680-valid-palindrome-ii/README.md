@@ -30,3 +30,19 @@
 	<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>
 	<li><code>s</code> consists of lowercase English letters.</li>
 </ul>
+
+## Approach
+
+- Use two pointers, `left` and `right`, to compare characters from both ends of the string.
+- If the characters match, move both pointers inward.
+- If a mismatch occurs, we get only one chance to remove a character.
+- Instead of actually deleting a character, check both possibilities:
+  - Skip the left character and verify if the remaining substring is a palindrome.
+  - Skip the right character and verify if the remaining substring is a palindrome.
+- If either substring is a palindrome, return `true`; otherwise, return `false`.
+
+### Time Complexity
+- **O(n)**
+
+### Space Complexity
+- **O(1)**
