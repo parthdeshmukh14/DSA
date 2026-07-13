@@ -49,3 +49,31 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 	<li><code>-100 &lt;= nums[i] &lt;= 100</code></li>
 	<li><code>nums</code> is sorted in <strong>non-decreasing</strong> order.</li>
 </ul>
+## Approach 1: HashSet (My Initial Approach)
+
+- Store each element in a `HashSet` to identify unique elements.
+- Count the number of duplicate elements and calculate `k = n - duplicates`.
+- **Mistake:** Although this correctly counts the number of unique elements, it does **not** modify the original array in-place as required by the problem.
+- A `HashSet` also uses extra space and is unnecessary since the array is already sorted.
+
+### Time Complexity
+- **O(n)**
+
+### Space Complexity
+- **O(n)**
+
+---
+
+## Approach 2: Two Pointers (Optimal)
+
+- Since the array is already sorted, duplicate elements are always adjacent.
+- Use a read pointer (`i`) to traverse the array.
+- Use a write pointer (`k`) to keep track of the position where the next unique element should be placed.
+- Whenever `nums[i] != nums[i - 1]`, copy `nums[i]` to `nums[k]` and increment `k`.
+- After the traversal, the first `k` positions of the array contain all unique elements in sorted order.
+
+### Time Complexity
+- **O(n)**
+
+### Space Complexity
+- **O(1)**
