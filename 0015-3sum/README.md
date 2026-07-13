@@ -39,3 +39,31 @@ Notice that the order of the output and the order of the triplets does not matte
 	<li><code>3 &lt;= nums.length &lt;= 3000</code></li>
 	<li><code>-10<sup>5</sup> &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>
 </ul>
+## Approach 1: Brute Force
+
+- Use three nested loops to generate every possible triplet.
+- If the sum of the three elements is `0`, store the triplet.
+- Sort each triplet before storing it in a `HashSet` to avoid duplicate triplets.
+- Convert the `HashSet` to a `List` and return the result.
+
+### Time Complexity
+- **O(n³)**
+
+### Space Complexity
+- **O(k)** (for storing unique triplets in the `HashSet`, where `k` is the number of unique triplets)
+
+---
+
+## Approach 2: Optimal (Sorting + Two Pointers)
+
+- Sort the array.
+- Fix one element at a time and use two pointers (`left` and `right`) to find the remaining two elements whose sum makes the total equal to `0`.
+- If the current sum is less than `0`, move the `left` pointer to increase the sum.
+- If the current sum is greater than `0`, move the `right` pointer to decrease the sum.
+- If the sum is `0`, store the triplet and skip duplicate values for both pointers as well as the fixed element to avoid duplicate triplets.
+
+### Time Complexity
+- **O(n²)**
+
+### Space Complexity
+- **O(1)** (excluding the output list)
