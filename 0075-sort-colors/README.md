@@ -30,3 +30,33 @@
 
 <p>&nbsp;</p>
 <p><strong>Follow up:</strong>&nbsp;Could you come up with a one-pass algorithm using only&nbsp;constant extra space?</p>
+## Approach 1: Brute Force
+
+- Use two nested loops to compare every pair of elements.
+- If the current element is greater than the next element, swap them.
+- Continue until the array is sorted in ascending order.
+
+### Time Complexity
+- **O(n²)**
+
+### Space Complexity
+- **O(1)**
+
+---
+
+## Approach 2: Dutch National Flag Algorithm (Optimal)
+
+- Maintain three pointers:
+  - `low` → Position where the next `0` should be placed.
+  - `mid` → Current element being processed.
+  - `high` → Position where the next `2` should be placed.
+- Traverse the array while `mid <= high`:
+  - If `nums[mid] == 0`, swap it with `nums[low]` and increment both `low` and `mid`.
+  - If `nums[mid] == 1`, it is already in the correct position, so increment `mid`.
+  - If `nums[mid] == 2`, swap it with `nums[high]` and decrement `high` (do not increment `mid` because the swapped element needs to be checked).
+
+### Time Complexity
+- **O(n)**
+
+### Space Complexity
+- **O(1)**
