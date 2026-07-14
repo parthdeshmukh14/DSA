@@ -26,3 +26,16 @@
 	<li><code>1 &lt;= k &lt;= n &lt;= 10<sup>5</sup></code></li>
 	<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
+## Approach: Fixed Sliding Window
+
+- Since the subarray size is fixed (`k`), first calculate the sum of the first window.
+- Maintain two pointers (`left` and `right`) representing the current window.
+- Slide the window by removing the outgoing element (`nums[left]`) and adding the incoming element (`nums[right + 1]`).
+- Calculate the average of the current window and update the maximum average.
+- Continue sliding until all windows of size `k` are processed.
+
+### Time Complexity
+- **O(n)**
+
+### Space Complexity
+- **O(1)**
