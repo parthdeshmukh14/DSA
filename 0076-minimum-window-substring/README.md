@@ -40,3 +40,18 @@ Since the largest window of s only has one &#39;a&#39;, return empty string.
 
 <p>&nbsp;</p>
 <p><strong>Follow up:</strong> Could you find an algorithm that runs in <code>O(m + n)</code> time?</p>
+## Approach
+
+- Store the frequency of all characters in `t` using a HashMap.
+- Expand the sliding window by moving the right pointer.
+- Whenever all required characters are present, the window becomes valid.
+- Shrink the window from the left as much as possible while keeping it valid.
+- Keep track of the smallest valid window and return it at the end.
+
+### Time Complexity
+
+- **O(m + n)**
+
+### Space Complexity
+
+- **O(n)** (Worst case)
