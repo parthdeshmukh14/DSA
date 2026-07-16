@@ -30,3 +30,31 @@ Then 4 is the first bad version.
 <ul>
 	<li><code>1 &lt;= bad &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>
 </ul>
+## Approach 1: Brute Force
+
+- Traverse all versions from `1` to `n`.
+- For each version, check whether it is bad using `isBadVersion(version)`.
+- As soon as the first bad version is found, return its version number.
+
+### Time Complexity
+- **O(n)**
+
+### Space Complexity
+- **O(1)**
+
+---
+
+## Approach 2: Binary Search (Optimal)
+
+- Since all versions after the first bad version are also bad, the versions follow a monotonic pattern:
+  - **Good Good Good Bad Bad Bad**
+- Apply Binary Search to find the boundary where the versions change from good to bad.
+- If the middle version is bad, store it as a possible answer and continue searching on the left to check for an earlier bad version.
+- If the middle version is good, search on the right half.
+- Return the stored answer after the search completes.
+
+### Time Complexity
+- **O(log n)**
+
+### Space Complexity
+- **O(1)**
