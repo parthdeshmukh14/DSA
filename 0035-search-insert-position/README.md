@@ -33,3 +33,18 @@
 	<li><code>nums</code> contains <strong>distinct</strong> values sorted in <strong>ascending</strong> order.</li>
 	<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>
 </ul>
+
+
+## Approach: Binary Search + Linear Scan
+
+- First, use Binary Search to check if the target exists in the sorted array.
+- If the target is found, return its index immediately.
+- If the target is not found, perform a linear scan from the beginning to find the first element greater than the target.
+- Return that index as the insertion position.
+- If no greater element exists, return `n` (insert at the end).
+
+### Time Complexity
+- **O(n)**
+
+### Space Complexity
+- **O(1)**
