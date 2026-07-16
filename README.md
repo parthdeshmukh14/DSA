@@ -21,6 +21,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0238-product-of-array-except-self](https://github.com/parthdeshmukh14/DSA/tree/master/0238-product-of-array-except-self) |
 | [0283-move-zeroes](https://github.com/parthdeshmukh14/DSA/tree/master/0283-move-zeroes) |
 | [0643-maximum-average-subarray-i](https://github.com/parthdeshmukh14/DSA/tree/master/0643-maximum-average-subarray-i) |
+| [0704-binary-search](https://github.com/parthdeshmukh14/DSA/tree/master/0704-binary-search) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -107,4 +108,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0003-longest-substring-without-repeating-characters](https://github.com/parthdeshmukh14/DSA/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0076-minimum-window-substring](https://github.com/parthdeshmukh14/DSA/tree/master/0076-minimum-window-substring) |
 | [0643-maximum-average-subarray-i](https://github.com/parthdeshmukh14/DSA/tree/master/0643-maximum-average-subarray-i) |
+## Binary Search
+|  |
+| ------- |
+| [0704-binary-search](https://github.com/parthdeshmukh14/DSA/tree/master/0704-binary-search) |
 <!---LeetCode Topics End-->
