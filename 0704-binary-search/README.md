@@ -28,3 +28,33 @@
 	<li>All the integers in <code>nums</code> are <strong>unique</strong>.</li>
 	<li><code>nums</code> is sorted in ascending order.</li>
 </ul>
+## Approach 1: Brute Force
+
+- Traverse the array from left to right.
+- Compare each element with the target.
+- If the target is found, return its index.
+- If the traversal completes without finding the target, return `-1`.
+
+### Time Complexity
+- **O(n)**
+
+### Space Complexity
+- **O(1)**
+
+---
+
+## Approach 2: Binary Search (Optimal)
+
+- Since the array is sorted, use Binary Search instead of checking every element.
+- Maintain two pointers: `low` and `high`.
+- Find the middle element.
+- If the middle element is the target, return its index.
+- If the target is greater than the middle element, search in the right half.
+- Otherwise, search in the left half.
+- Repeat until the target is found or the search space becomes empty.
+
+### Time Complexity
+- **O(log n)**
+
+### Space Complexity
+- **O(1)**
