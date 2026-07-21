@@ -42,3 +42,25 @@ minStack.getMin(); // return -2
 	<li>Methods <code>pop</code>, <code>top</code> and <code>getMin</code> operations will always be called on <strong>non-empty</strong> stacks.</li>
 	<li>At most <code>3 * 10<sup>4</sup></code> calls will be made to <code>push</code>, <code>pop</code>, <code>top</code>, and <code>getMin</code>.</li>
 </ul>
+## Approach
+
+- Use two stacks:
+  - **Main Stack** to store all the elements.
+  - **Min Stack** to keep track of the minimum element at every stage.
+- While pushing an element:
+  - Push it into the main stack.
+  - If the min stack is empty or the current element is less than or equal to the current minimum, push it into the min stack as well.
+- While popping:
+  - Remove the top element from the main stack.
+  - If the removed element is equal to the top of the min stack, remove it from the min stack too.
+- The `top()` operation returns the top element of the main stack.
+- The `getMin()` operation returns the top element of the min stack, which is always the current minimum.
+
+### Time Complexity
+- **push()** → **O(1)**
+- **pop()** → **O(1)**
+- **top()** → **O(1)**
+- **getMin()** → **O(1)**
+
+### Space Complexity
+- **O(n)** (Two stacks are used to store the elements and minimum values.)
