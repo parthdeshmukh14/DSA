@@ -56,3 +56,20 @@
 	<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>
 	<li><code>s</code> consists of parentheses only <code>&#39;()[]{}&#39;</code>.</li>
 </ul>
+## Approach
+
+- Create a stack to store all opening brackets.
+- Traverse the string character by character.
+- If the current character is an opening bracket (`(`, `{`, `[`), push it onto the stack.
+- If it is a closing bracket:
+  - If the stack is empty, return `false` because there is no opening bracket to match.
+  - Otherwise, check whether the top of the stack contains the corresponding opening bracket.
+  - If it matches, pop the opening bracket from the stack.
+  - If it does not match, return `false`.
+- After processing all characters, return `true` only if the stack is empty, indicating that every opening bracket has been matched correctly.
+
+### Time Complexity
+- **O(n)**
+
+### Space Complexity
+- **O(n)** (In the worst case, all characters are opening brackets and are stored in the stack.)
