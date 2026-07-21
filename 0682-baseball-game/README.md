@@ -82,3 +82,27 @@ Since the record is empty, the total sum is 0.
 	<li>For operation <code>&quot;+&quot;</code>, there will always be at least two previous scores on the record.</li>
 	<li>For operations <code>&quot;C&quot;</code> and <code>&quot;D&quot;</code>, there will always be at least one previous score on the record.</li>
 </ul>
+
+## Approach
+
+- Use a stack to maintain the valid scores.
+- Traverse each operation in the given array.
+- For each operation:
+  - If it is a number, convert it to an integer and push it onto the stack.
+  - If it is `"C"`, remove the previous valid score by popping the top element.
+  - If it is `"D"`, double the previous score (`2 * stack.peek()`) and push the result.
+  - If it is `"+"`, calculate the sum of the last two valid scores:
+    - Temporarily pop the last score.
+    - Access the second last score using `peek()`.
+    - Push the last score back to restore the original stack.
+    - Push the sum of the last two scores onto the stack.
+- After processing all operations, traverse the stack and calculate the total sum of all valid scores.
+
+### Time Complexity
+- **O(n)**
+  - Each operation (`push`, `pop`, `peek`) takes **O(1)** time.
+  - Calculating the final sum requires traversing all remaining scores once.
+
+### Space Complexity
+- **O(n)**
+  - In the worst case, all scores are stored in the stack.
