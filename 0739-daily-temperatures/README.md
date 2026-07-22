@@ -18,3 +18,40 @@
 	<li><code>1 &lt;=&nbsp;temperatures.length &lt;= 10<sup>5</sup></code></li>
 	<li><code>30 &lt;=&nbsp;temperatures[i] &lt;= 100</code></li>
 </ul>
+## Approach 1: Brute Force
+
+- For each day's temperature, check every following day until a warmer temperature is found.
+- Maintain a counter to count the number of days waited.
+- If a warmer temperature is found, store the count in the answer array.
+- If no warmer temperature exists, the answer remains `0` (default value).
+- Repeat this process for every index in the array.
+
+### Time Complexity
+- **O(n²)**
+  - For every element, we may scan all remaining elements.
+
+### Space Complexity
+- **O(1)** (excluding the output array)
+
+---
+
+## Approach 2: Optimal (Monotonic Decreasing Stack)
+
+- Use a stack to store the **indices** of temperatures whose next warmer day has not been found yet.
+- Traverse the temperature array from left to right.
+- For each current temperature:
+  - While the stack is not empty and the current temperature is greater than the temperature at the index stored on the top of the stack:
+    - Pop the previous index.
+    - Calculate the number of days waited as:
+      `currentIndex - previousIndex`
+    - Store this value in the answer array.
+- Push the current index onto the stack.
+- Any indices left in the stack do not have a warmer future temperature, so their answers remain `0`.
+
+### Time Complexity
+- **O(n)**
+  - Each index is pushed onto the stack once and popped at most once.
+
+### Space Complexity
+- **O(n)**
+  - In the worst case (strictly decreasing temperatures), all indices are stored in the stack.
