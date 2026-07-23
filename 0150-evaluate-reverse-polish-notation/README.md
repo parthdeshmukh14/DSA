@@ -51,3 +51,30 @@
 	<li><code>1 &lt;= tokens.length &lt;= 10<sup>4</sup></code></li>
 	<li><code>tokens[i]</code> is either an operator: <code>&quot;+&quot;</code>, <code>&quot;-&quot;</code>, <code>&quot;*&quot;</code>, or <code>&quot;/&quot;</code>, or an integer in the range <code>[-200, 200]</code>.</li>
 </ul>
+
+
+## Approach
+
+- Use a stack to evaluate the Reverse Polish Notation (Postfix Expression).
+- Traverse each token in the given array.
+- For each token:
+  - If it is a number, convert it to an integer and push it onto the stack.
+  - If it is an operator (`+`, `-`, `*`, `/`):
+    - Pop the top two elements from the stack.
+    - The first popped element is the **second operand**.
+    - The second popped element is the **first operand**.
+    - Perform the corresponding operation.
+    - Push the result back onto the stack.
+- After processing all the tokens, the stack contains only one element, which is the final answer.
+
+### Time Complexity
+- **O(n)**
+  - Each token is processed exactly once.
+  - Every stack operation (`push`, `pop`, `peek`) takes **O(1)** time.
+
+### Space Complexity
+- **O(n)**
+  - In the worst case, all numbers are stored in the stack.
+
+---
+
