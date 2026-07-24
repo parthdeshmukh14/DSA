@@ -35,3 +35,29 @@ recentCounter.ping(3002);  // requests = [1, <u>100</u>, <u>3001</u>, <u>3002</u
 	<li>Each test case will call <code>ping</code> with <strong>strictly increasing</strong> values of <code>t</code>.</li>
 	<li>At most <code>10<sup>4</sup></code> calls will be made to <code>ping</code>.</li>
 </ul>
+
+
+# Approach
+
+We use a **Queue** to store the timestamps of all recent requests.
+
+For each `ping(t)`:
+
+- Add the current timestamp `t` to the queue.
+- Remove all timestamps from the front of the queue that are **less than `t - 3000`**, since they are outside the valid time range.
+- After removing outdated requests, all remaining timestamps in the queue lie within the interval **[t - 3000, t]**.
+- Return the size of the queue, which represents the number of recent requests.
+
+Since requests arrive in increasing order of time, the oldest requests are always at the front of the queue, making it efficient to remove expired requests.
+
+## Time Complexity
+
+- **ping()** → **O(1)** amortized
+
+Each timestamp is added to the queue once and removed at most once.
+
+## Space Complexity
+
+- **O(n)**
+
+Where `n` is the number of timestamps currently stored in the queue.
