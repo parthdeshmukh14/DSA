@@ -46,3 +46,29 @@ myQueue.empty(); // return false
 
 <p>&nbsp;</p>
 <p><strong>Follow-up:</strong> Can you implement the queue such that each operation is <strong><a href="https://en.wikipedia.org/wiki/Amortized_analysis" target="_blank">amortized</a></strong> <code>O(1)</code> time complexity? In other words, performing <code>n</code> operations will take overall <code>O(n)</code> time even if one of those operations may take longer.</p>
+
+
+
+# Approach
+
+We use Java's `Queue` interface implemented with `ArrayDeque` to simulate the basic queue operations following the **FIFO (First In First Out)** principle.
+
+- **push(x):** Insert the element at the rear of the queue using `offer()`.
+- **pop():** Remove and return the front element using `poll()`.
+- **peek():** Return the front element without removing it using `peek()`.
+- **empty():** Check whether the queue is empty using `isEmpty()`.
+
+Since `ArrayDeque` provides constant-time queue operations, all methods are efficient.
+
+## Time Complexity
+
+- **push()** → `O(1)`
+- **pop()** → `O(1)`
+- **peek()** → `O(1)`
+- **empty()** → `O(1)`
+
+## Space Complexity
+
+- **O(n)**
+
+Where `n` is the number of elements stored in the queue.
