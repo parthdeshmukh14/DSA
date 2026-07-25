@@ -40,3 +40,50 @@
 
 <p>&nbsp;</p>
 <p><strong>Follow up:</strong> Can you solve it using <code>O(1)</code> (i.e. constant) memory?</p>
+
+
+# Approach 1: HashSet (Brute Force)
+
+- Traverse the linked list from the head.
+- Store each visited node in a `HashSet<ListNode>`.
+- Before adding a node to the HashSet, check if it already exists in the set.
+- If the node is already present, it means we have visited the same node before, so a cycle exists.
+- If we reach `null`, the linked list has no cycle.
+
+### Time Complexity
+
+- **O(n)**
+
+Each node is visited at most once, and HashSet operations (`contains` and `add`) take **O(1)** on average.
+
+### Space Complexity
+
+- **O(n)**
+
+In the worst case, all nodes are stored in the HashSet.
+
+---
+
+# Approach 2: Fast & Slow Pointer (Optimal)
+
+- Initialize two pointers:
+  - `slow` moves one node at a time.
+  - `fast` moves two nodes at a time.
+- Traverse the linked list while `fast` and `fast.next` are not `null`.
+- In each iteration:
+  - Move `slow` one step.
+  - Move `fast` two steps.
+- If at any point `slow == fast`, both pointers have met inside the cycle, so return `true`.
+- If `fast` reaches `null` (or `fast.next` becomes `null`), the linked list has no cycle.
+
+### Time Complexity
+
+- **O(n)**
+
+Each pointer traverses the linked list at most once.
+
+### Space Complexity
+
+- **O(1)**
+
+Only two pointers are used, and no extra data structure is required.
