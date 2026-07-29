@@ -81,6 +81,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0050-powx-n](https://github.com/parthdeshmukh14/DSA/tree/master/0050-powx-n) |
 | [0066-plus-one](https://github.com/parthdeshmukh14/DSA/tree/master/0066-plus-one) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/parthdeshmukh14/DSA/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0189-rotate-array](https://github.com/parthdeshmukh14/DSA/tree/master/0189-rotate-array) |
@@ -173,6 +174,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Recursion
 |  |
 | ------- |
+| [0050-powx-n](https://github.com/parthdeshmukh14/DSA/tree/master/0050-powx-n) |
 | [0206-reverse-linked-list](https://github.com/parthdeshmukh14/DSA/tree/master/0206-reverse-linked-list) |
 | [0509-fibonacci-number](https://github.com/parthdeshmukh14/DSA/tree/master/0509-fibonacci-number) |
 ## Memoization
