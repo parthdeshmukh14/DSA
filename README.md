@@ -86,6 +86,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0189-rotate-array](https://github.com/parthdeshmukh14/DSA/tree/master/0189-rotate-array) |
 | [0202-happy-number](https://github.com/parthdeshmukh14/DSA/tree/master/0202-happy-number) |
 | [0509-fibonacci-number](https://github.com/parthdeshmukh14/DSA/tree/master/0509-fibonacci-number) |
+| [1006-clumsy-factorial](https://github.com/parthdeshmukh14/DSA/tree/master/1006-clumsy-factorial) |
 ## String
 |  |
 | ------- |
@@ -138,6 +139,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0232-implement-queue-using-stacks](https://github.com/parthdeshmukh14/DSA/tree/master/0232-implement-queue-using-stacks) |
 | [0682-baseball-game](https://github.com/parthdeshmukh14/DSA/tree/master/0682-baseball-game) |
 | [0739-daily-temperatures](https://github.com/parthdeshmukh14/DSA/tree/master/0739-daily-temperatures) |
+| [1006-clumsy-factorial](https://github.com/parthdeshmukh14/DSA/tree/master/1006-clumsy-factorial) |
 ## Design
 |  |
 | ------- |
@@ -148,6 +150,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0682-baseball-game](https://github.com/parthdeshmukh14/DSA/tree/master/0682-baseball-game) |
+| [1006-clumsy-factorial](https://github.com/parthdeshmukh14/DSA/tree/master/1006-clumsy-factorial) |
 ## Monotonic Stack
 |  |
 | ------- |
