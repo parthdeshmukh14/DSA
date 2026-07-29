@@ -39,3 +39,40 @@
 <ul>
 	<li><code>1 &lt;= n &lt;= 10<sup>4</sup></code></li>
 </ul>
+
+
+## Approach
+
+- Use a stack to simulate the expression while maintaining the correct order of operations.
+- Push the first number (`n`) onto the stack.
+- Process the remaining numbers from `n - 1` down to `1`.
+- Repeat the operations in the fixed order:
+  - `*` → Multiply the top element of the stack with the current number and push the result.
+  - `/` → Divide the top element of the stack by the current number and push the result.
+  - `+` → Push the current number onto the stack.
+  - `-` → Push the negative of the current number onto the stack.
+- Continue cycling through the operations using:
+  ```java
+  operation = (operation + 1) % 4;
+  ```
+- After processing all the numbers, pop every element from the stack and add them together to obtain the final clumsy factorial.
+
+### Time Complexity
+- **O(n)**
+  - Each number from `n` to `1` is processed exactly once.
+  - Every stack operation (`push`, `pop`, `peek`) takes **O(1)** time.
+
+### Space Complexity
+- **O(n)**
+  - In the worst case, the stack stores all intermediate values.
+
+---
+
+## Key Observation
+
+- Multiplication (`*`) and Division (`/`) have higher precedence than Addition (`+`) and Subtraction (`-`).
+- Instead of evaluating the entire expression at once, the stack naturally maintains the correct order of operations:
+  - `*` and `/` immediately modify the top element.
+  - `+` pushes a positive value.
+  - `-` pushes a negative value.
+- Finally, summing all elements in the stack gives the correct clumsy factorial.
