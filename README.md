@@ -14,6 +14,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0053-maximum-subarray](https://github.com/parthdeshmukh14/DSA/tree/master/0053-maximum-subarray) |
 | [0066-plus-one](https://github.com/parthdeshmukh14/DSA/tree/master/0066-plus-one) |
 | [0075-sort-colors](https://github.com/parthdeshmukh14/DSA/tree/master/0075-sort-colors) |
+| [0078-subsets](https://github.com/parthdeshmukh14/DSA/tree/master/0078-subsets) |
 | [0088-merge-sorted-array](https://github.com/parthdeshmukh14/DSA/tree/master/0088-merge-sorted-array) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/parthdeshmukh14/DSA/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/parthdeshmukh14/DSA/tree/master/0150-evaluate-reverse-polish-notation) |
@@ -181,4 +182,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0509-fibonacci-number](https://github.com/parthdeshmukh14/DSA/tree/master/0509-fibonacci-number) |
+## Backtracking
+|  |
+| ------- |
+| [0078-subsets](https://github.com/parthdeshmukh14/DSA/tree/master/0078-subsets) |
+## Bit Manipulation
+|  |
+| ------- |
+| [0078-subsets](https://github.com/parthdeshmukh14/DSA/tree/master/0078-subsets) |
 <!---LeetCode Topics End-->
