@@ -31,3 +31,18 @@
 	<li>The number of nodes in both trees is in the range <code>[0, 100]</code>.</li>
 	<li><code>-10<sup>4</sup> &lt;= Node.val &lt;= 10<sup>4</sup></code></li>
 </ul>
+## Approach
+
+1. If both nodes are `null`, return `true`.
+2. If one node is `null` and the other is not, return `false`.
+3. If the values of the current nodes are different, return `false`.
+4. Recursively compare the left subtrees and the right subtrees.
+5. Return `true` only if both left and right subtree comparisons are `true`.
+
+### Time Complexity
+- **O(n)** — Every corresponding node of both trees is visited once.
+
+### Space Complexity
+- **O(h)** — Recursive call stack, where `h` is the height of the tree.
+  - Worst case: **O(n)** (skewed tree)
+  - Balanced tree: **O(log n)**
