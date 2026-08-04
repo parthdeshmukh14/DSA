@@ -29,3 +29,20 @@
 	<li>The number of nodes in the tree is in the range <code>[0, 100]</code>.</li>
 	<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 </ul>
+
+## Approach
+
+1. If the current node is `null`, return `null`.
+2. Swap the left and right child of the current node.
+3. Recursively invert the left subtree.
+4. Recursively invert the right subtree.
+5. Return the root.
+
+### Time Complexity
+- **O(n)** — Every node is visited exactly once.
+
+### Space Complexity
+- **O(h)** — Recursive call stack, where `h` is the height of the tree.
+  - Worst case: **O(n)** (skewed tree)
+  - Balanced tree: **O(log n)**
+```
