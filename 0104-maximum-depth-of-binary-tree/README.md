@@ -24,3 +24,18 @@
 	<li>The number of nodes in the tree is in the range <code>[0, 10<sup>4</sup>]</code>.</li>
 	<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 </ul>
+## Approach
+
+1. If the current node is `null`, return `0`.
+2. Recursively find the maximum depth of the left subtree.
+3. Recursively find the maximum depth of the right subtree.
+4. Return `1 + Math.max(leftDepth, rightDepth)`.
+
+### Time Complexity
+- **O(n)** — Every node is visited exactly once.
+
+### Space Complexity
+- **O(h)** — Recursive call stack, where `h` is the height of the tree.
+  - Worst case: **O(n)** (skewed tree)
+  - Balanced tree: **O(log n)**
+```
