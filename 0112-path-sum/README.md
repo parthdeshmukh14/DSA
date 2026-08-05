@@ -38,3 +38,80 @@ There is no root-to-leaf path with sum = 5.
 	<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>
 	<li><code>-1000 &lt;= targetSum &lt;= 1000</code></li>
 </ul>
+
+# 💡 My Approach (DFS + Recursion)
+
+- The problem asks us to check whether there exists a **root-to-leaf path** whose sum equals the given `targetSum`.
+- Traverse the tree using **Depth First Search (DFS)**.
+- At every node, subtract the current node's value from the remaining `targetSum`.
+- Continue recursively for both the left and right subtrees with the updated remaining target.
+- When a **leaf node** is reached:
+  - If the remaining target is equal to the leaf node's value, return `true`.
+  - Otherwise, return `false`.
+- If either the left or right subtree returns `true`, then a valid path exists.
+- If no valid path is found after exploring all paths, return `false`.
+
+**Time Complexity:** `O(n)`
+- Each node is visited exactly once.
+
+**Space Complexity:** `O(h)`
+- `h` is the height of the tree due to the recursion stack.
+- Worst Case (Skewed Tree): `O(n)`
+- Best/Average Case (Balanced Tree): `O(log n)`
+
+---
+
+# 🧠 Pattern Learned
+
+## Depth First Search (DFS) + Recursion
+
+### Intuition
+
+- Think **one path at a time**, not level by level.
+- Start from the root.
+- At each node:
+  - Use the current node's value.
+  - Reduce the remaining target.
+- Continue exploring deeper until a leaf node is reached.
+- At a leaf node, check whether the remaining target is exactly equal to the leaf node's value.
+- If yes, a valid root-to-leaf path exists.
+- Otherwise, backtrack and explore the remaining paths.
+
+### Key Observation
+
+- Instead of maintaining a running sum, we keep reducing the **remaining target**.
+- Every recursive call receives its **own copy** of `targetSum`, so there is no need to undo or backtrack the subtraction manually.
+- The comparison is performed **only at a leaf node**, because the problem requires a complete **root-to-leaf** path.
+
+### Recursive Flow
+
+1. Base Case:
+   - If the current node is `null`, return `false`.
+
+2. Leaf Node:
+   - If both children are `null`, check:
+     ```java
+     targetSum == root.val
+     ```
+   - Return the result.
+
+3. Recursive Step:
+   - Call the left subtree with:
+     ```java
+     targetSum - root.val
+     ```
+   - Call the right subtree with:
+     ```java
+     targetSum - root.val
+     ```
+   - Return `true` if either subtree returns `true`.
+
+### Pattern Applications
+
+- Path Sum
+- Path Sum II
+- Sum Root to Leaf Numbers
+- Binary Tree Maximum Path Sum
+- Minimum Depth of Binary Tree (DFS approach)
+- Tree Height / Maximum Depth
+- Balanced Binary Tree
